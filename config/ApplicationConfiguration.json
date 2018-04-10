@@ -1,0 +1,27 @@
+{
+    "server": {
+        "baseURL": "localhost:8181",
+        "baseDomain": "localhost",
+        "port": 8181,
+        "secure": 0
+    },
+    "os": 2,
+    "environment": 1,
+    "ssl": {
+        "port": 443,
+        "originCertificatePath": "",
+        "privateKeyPath": "",
+        "verifyMode": "peer"
+    },
+    "logging": {
+        "requestLoggingPath": "./perfectRequests.log",
+        "logPath": "./perfect.log"
+    },
+    "db": {
+        "name": "perfect",
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "pass": ""
+    }
+}
