@@ -16,6 +16,12 @@ protocol AppProtocol {
     func server() -> HTTPServer.Server
 }
 
+protocol AppDatabaseProtocol {
+    associatedtype DBConfigurationProtocol: DatabaseConfigurationProtocol
+    func database() -> Database<DBConfigurationProtocol>?
+    func disconnect()
+}
+
 struct Filters {
     var request: [(HTTPRequestFilter, HTTPFilterPriority)]?
     var response: [(HTTPResponseFilter, HTTPFilterPriority)]?
@@ -75,19 +81,21 @@ struct Application: AppProtocol {
                                                   routes: routes,
                                                   requestFilters: filters?.request ?? [],
                                                   responseFilters: filters?.response ?? [])
-
         return httpServer
     }
 }
 
-extension Application {
+extension Application: AppDatabaseProtocol {
+    
     func database() -> Database<MySQLDatabaseConfiguration>? {
-        
         guard let dbConfig = config?.db else {
             return nil
         }
-        
         let adapter = DatabaseAdapter(config: dbConfig)
         return adapter.connect()
+    }
+    
+    func disconnect() {
+       // Todo
     }
 }
