@@ -2,6 +2,7 @@
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
+import Lib
 
 #if os(Linux)
 let fileRoot = "/perfect-deployed/Perfect/"
@@ -16,9 +17,9 @@ guard let db = app.database() else {
     fatalError("Not able to connect to DB")
 }
 
-let database = DatabaseManager(db: db)
+// let database = DatabaseManager(db: db)
 do {
-    try database.create(Person.self, pk: \.id)
+    // try database.create(Person.self, pk: \.id)
     try HTTPServer.launch(app.server())
 } catch {
     fatalError("\(error)")

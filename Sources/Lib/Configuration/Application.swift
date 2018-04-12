@@ -22,24 +22,24 @@ protocol AppDatabaseProtocol {
     func disconnect()
 }
 
-struct Filters {
+public struct Filters {
     var request: [(HTTPRequestFilter, HTTPFilterPriority)]?
     var response: [(HTTPResponseFilter, HTTPFilterPriority)]?
 }
 
-struct Application: AppProtocol {
+public struct Application: AppProtocol {
 
     var name: String
     var routes: Routes
     var config: Configuration?
     var filters: Filters?
     
-    init(name: String, path: String) {
+    public init(name: String, path: String) {
         self.init(name: name, path: path, routes: nil, filters: nil)
         self.name = name
     }
     
-    init(name: String,
+    public init(name: String,
          path: String,
          routes: Routes?,
          filters: Filters?) {
@@ -73,7 +73,7 @@ struct Application: AppProtocol {
         }
     }
     
-    func server() -> HTTPServer.Server {
+    public func server() -> HTTPServer.Server {
         
         let port = config?.server?.port ?? 8181
         let httpServer = HTTPServer.Server.server(name: name,
@@ -87,7 +87,7 @@ struct Application: AppProtocol {
 
 extension Application: AppDatabaseProtocol {
     
-    func database() -> Database<MySQLDatabaseConfiguration>? {
+    public func database() -> Database<MySQLDatabaseConfiguration>? {
         guard let dbConfig = config?.db else {
             return nil
         }

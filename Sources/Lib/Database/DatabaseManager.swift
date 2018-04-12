@@ -3,7 +3,7 @@ import Foundation
 import PerfectMySQL
 import PerfectCRUD
 
-struct DatabaseManager<D: DatabaseConfigurationProtocol> {
+public struct DatabaseManager<D: DatabaseConfigurationProtocol> {
     
     // MARK: - Dependency Injection
 
@@ -131,7 +131,7 @@ struct DatabaseManager<D: DatabaseConfigurationProtocol> {
     
     // MARK: - Helpers
     
-    func tableType<T: Codable>(_ table: T) throws -> T.Type {
+    public func tableType<T: Codable>(_ table: T) throws -> T.Type {
         let mirror = Mirror(reflecting: table)
         guard let type = mirror.subjectType as? T.Type else {
             throw CRUDSQLGenError("Not able to identify the table")

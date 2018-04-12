@@ -1,14 +1,14 @@
 
 import Foundation
 
-struct PhoneNumber: Codable {
+public struct PhoneNumber: Codable {
     let id: UUID
     let personId: UUID
     let planetCode: Int
     let number: String
 }
 
-struct Person: Codable {
+public struct Person: Codable {
     let id: UUID
     let firstName: String
     let lastName: String
