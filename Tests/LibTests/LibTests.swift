@@ -10,35 +10,38 @@ import Lib
 
 class LibTests: XCTestCase {
     
+    var filePath: String!
+    var app: Application!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        filePath = "./config/ApplicationConfiguration.json"
+        app = Application(name: "Perfect", path: filePath)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let filePath = "./config/ApplicationConfiguration.json"
-
-        let app = Application(name: "Perfect", path: filePath)
+    func testApplicationInit() {
+        XCTAssertNotNil(app)
+    }
+    
+    func testDatabaseConnection() {
         guard let db = app.database() else {
-            fatalError("Not able to connect to DB")
+            XCTAssert(false)
+            return
         }
         
         let database = DatabaseManager(db: db)
         do {
-            try database.read(Person.self, where: nil)
+            let people = try database.read(Person.self, where: nil)
+            XCTAssertNotNil(people)
+            print("\(people.first)")
         } catch {
             print("error")
+            XCTAssert(false)
         }
-        
-        //try database.create(Person.self, pk: \Person.id)
-        
     }
     
     func testPerformanceExample() {
@@ -47,5 +50,4 @@ class LibTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
 }
