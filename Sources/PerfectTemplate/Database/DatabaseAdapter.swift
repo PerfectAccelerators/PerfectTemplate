@@ -1,9 +1,3 @@
-//
-//  DBConnection.swift
-//  BS
-//
-//  Created by Fatih Nayebi on 2018-04-09.
-//
 
 import PerfectMySQL
 import PerfectCRUD

@@ -18,7 +18,6 @@ extension Handlers {
         let apiResponse = HTTPResponseContent<APIResult<T>>(status: status,
                                                             body: result)
         promise.set(apiResponse)
-        Logger.log(.debug, "Request: \(request.method) - \(request.path) - Response JSON message: \(result.message ?? "")")
     }
     
     // MARK: - error
@@ -39,7 +38,6 @@ extension Handlers {
         let apiResponse = HTTPResponseContent<APIResult<T>>(status: status,
                                                             body: apiResult)
         promise.set(apiResponse)
-        Logger.log(.debug, "Request: \(request.method) - \(request.path) - Response JSON message: \(message ?? "")")
     }
     
     // MARK: - incomplete request

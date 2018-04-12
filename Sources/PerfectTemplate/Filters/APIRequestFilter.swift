@@ -20,8 +20,6 @@ struct APIRequestFilter: HTTPRequestFilter {
                     response.addHeader(.contentType, value: "application/json")
 
                     response.completed()
-                    
-                    Logger.log(.critical, "post body string containes javascript!", response)
                 }
             } else {
                 _ = try? response.setBody(json: ["msg": "Incomplete request"])
