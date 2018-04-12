@@ -8,12 +8,15 @@ let package = Package(
 	dependencies: [
 		.package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", "3.0.0"..<"4.0.0"),
 		.package(url: "https://github.com/PerfectlySoft/Perfect-MySQL.git", "3.1.0"..<"4.0.0"),
-        .package(url: "https://github.com/iamjono/SwiftMoment.git", "0.0.1"..<"4.0.0"),
+		.package(url: "https://github.com/iamjono/SwiftMoment.git", "0.0.1"..<"4.0.0"),
 		.package(url: "https://github.com/PerfectlySoft/Perfect-RequestLogger.git", "3.0.0"..<"4.0.0")
 	],
 	targets: [
-		.target(name: "Lib", dependencies: ["PerfectMySQL", "PerfectHTTPServer", "SwiftMoment", "PerfectRequestLogger"]),
-        .target(name: "App", dependencies: ["Lib"]),
-        .testTarget(name: "LibTests", dependencies: ["Lib"])
+		.target(name: "Lib", dependencies: ["PerfectMySQL", 
+						    "PerfectHTTPServer", 
+						    "SwiftMoment", 
+						    "PerfectRequestLogger"]),
+		.target(name: "App", dependencies: ["Lib"]),
+		.testTarget(name: "LibTests", dependencies: ["Lib"])
 	]
 )
