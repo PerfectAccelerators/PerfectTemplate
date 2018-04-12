@@ -27,7 +27,7 @@ struct ClientAPIMappingHelper {
             LogFile.critical("CURL GET request perform error")
             let httpError = ClientAPIError(code: 500,
                                            userFriendlyMessage: "",
-                                           message: "confifmation failed - \(error.localizedDescription)",
+                                           message: "confirmation failed - \(error.localizedDescription)",
                                            success: false)
             completion(nil, httpError)
         }
