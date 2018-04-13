@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Curly",
+        "repositoryURL": "https://github.com/PerfectAccelerators/curly.git",
+        "state": {
+          "branch": null,
+          "revision": "f6c8abac96af9b9b72d007a3a858b0d4cad79e09",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "COpenSSL",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-COpenSSL.git",
         "state": {
