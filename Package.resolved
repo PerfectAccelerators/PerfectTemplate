@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-CRUD.git",
         "state": {
           "branch": null,
-          "revision": "509f1f9849f49743a2cca2656fc7b5858bff9f2f",
-          "version": "1.0.2"
+          "revision": "bb78fc6a2119c1dcf485a967e547098a61b6728c",
+          "version": "1.0.3"
         }
       },
       {
@@ -65,12 +65,12 @@
         }
       },
       {
-        "package": "Perfect-HTTPServer",
+        "package": "PerfectHTTPServer",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-HTTPServer.git",
         "state": {
           "branch": null,
-          "revision": "151fddb3cd688b702cbc01c872ad649ed1412bfd",
-          "version": "3.0.11"
+          "revision": "5212979491a2ce71c11f9449310c9e06982798d1",
+          "version": "3.0.14"
         }
       },
       {
@@ -96,8 +96,8 @@
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-MySQL.git",
         "state": {
           "branch": null,
-          "revision": "8764c06e238376c667924447b6a3b8d9ee8d9b24",
-          "version": "3.1.1"
+          "revision": "5c751b60dfaac360cca579d91d3493f7cacdb4e3",
+          "version": "3.1.2"
         }
       },
       {
@@ -114,8 +114,8 @@
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Net.git",
         "state": {
           "branch": null,
-          "revision": "771e32291e070e22b824c8eb2b37b5ea819f7f97",
-          "version": "3.1.1"
+          "revision": "e51b4174be4aea4d2a18cdc4053783ef8d5c403c",
+          "version": "3.1.2"
         }
       },
       {
@@ -150,8 +150,8 @@
         "repositoryURL": "https://github.com/iamjono/SwiftMoment.git",
         "state": {
           "branch": null,
-          "revision": "2db870fe30d6ab327458df038a56727f23a3da18",
-          "version": "1.0.0"
+          "revision": "9c6f0e8f590930f0f79a85e40e167b7b4cd071fa",
+          "version": "1.1.0"
         }
       }
     ]
