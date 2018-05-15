@@ -1,5 +1,6 @@
 
 import Foundation
+import ScantORM
 
 struct Configuration: Codable {
     let server: ServerConfiguration?
@@ -20,15 +21,6 @@ struct ServerConfiguration: Codable {
 struct LoggingConfiguration: Codable {
     let requestLoggingPath: String?
     let logPath: String?
-}
-
-struct DBConfiguration: Codable {
-    let name: String?
-    let host: String?
-    let port: Int?
-    let user: String?
-    let pass: String?
-    let driverType: DBDriverType
 }
 
 enum DBDriverType: Int, Codable {

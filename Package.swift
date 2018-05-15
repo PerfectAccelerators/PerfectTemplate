@@ -8,6 +8,8 @@ let package = Package(
     name: "PerfectTemplate",
     dependencies: [
         .package(url: "https://github.com/PerfectAccelerators/curly.git", from: "0.1.0"),
+        .package(url: "https://github.com/PerfectAccelerators/PerfectValidation.git", from: "0.1.0"),
+        .package(url: "https://github.com/PerfectAccelerators/ScantORM.git", .branch("master")),
         .package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", "3.0.0"..<"4.0.0"),
         .package(url: "https://github.com/PerfectlySoft/Perfect-MySQL.git", "3.1.0"..<"4.0.0"),
         .package(url: "https://github.com/iamjono/SwiftMoment.git", "0.0.1"..<"4.0.0"),
@@ -19,7 +21,9 @@ let package = Package(
             "PerfectMySQL",
             "PerfectHTTPServer",
             "SwiftMoment",
-            "PerfectRequestLogger"]),
+            "PerfectRequestLogger",
+            "PerfectValidation",
+            "ScantORM"]),
         .target(name: "App", dependencies: ["Lib"]),
         .testTarget(name: "LibTests", dependencies: ["Lib"])
     ]

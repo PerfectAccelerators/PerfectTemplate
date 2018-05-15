@@ -4,6 +4,7 @@ import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 import PerfectCRUD
+import ScantORM
 import PerfectMySQL
 
 protocol AppProtocol {
@@ -91,11 +92,11 @@ extension Application: AppDatabaseProtocol {
         guard let dbConfig = config?.db else {
             return nil
         }
-        let adapter = DatabaseAdapter(config: dbConfig)
+        let adapter = DatabaseAdapter<MySQLDatabaseConfiguration>(config: dbConfig)
         return adapter.connect()
     }
     
     func disconnect() {
-       // Todo
+        // Todo
     }
 }
