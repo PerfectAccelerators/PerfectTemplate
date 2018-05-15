@@ -3,9 +3,9 @@ import Foundation
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
-import PerfectCRUD
 import ScantORM
 import PerfectMySQL
+import PerfectCRUD
 
 protocol AppProtocol {
     
@@ -15,12 +15,6 @@ protocol AppProtocol {
     var filters: Filters? { get }
     init(name: String, path: String)
     func server() -> HTTPServer.Server
-}
-
-protocol AppDatabaseProtocol {
-    associatedtype DBConfigurationProtocol: DatabaseConfigurationProtocol
-    func database() -> Database<DBConfigurationProtocol>?
-    func disconnect()
 }
 
 public struct Filters {
@@ -96,7 +90,7 @@ extension Application: AppDatabaseProtocol {
         return adapter.connect()
     }
     
-    func disconnect() {
+    public func disconnect() {
         // Todo
     }
 }
