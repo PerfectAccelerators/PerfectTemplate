@@ -23,11 +23,6 @@ struct LoggingConfiguration: Codable {
     let logPath: String?
 }
 
-enum DBDriverType: Int, Codable {
-    case MySQL = 1
-    case PostgreSQL = 2
-}
-
 struct SSLConfiguration: Codable {
     let port: Int?
     let originCertificatePath: String?
