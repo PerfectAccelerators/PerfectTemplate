@@ -7,6 +7,7 @@
 
 import XCTest
 import Lib
+@testable import ScantORM
 
 class LibTests: XCTestCase {
     
@@ -37,7 +38,7 @@ class LibTests: XCTestCase {
         do {
             let people = try database.read(Person.self, where: nil)
             XCTAssertNotNil(people)
-            print("\(people.first)")
+            print("\(String(describing: people.first))")
         } catch {
             print("error")
             XCTAssert(false)
@@ -50,4 +51,8 @@ class LibTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    static var allTests = [
+        ("testDatabaseConnection", testDatabaseConnection),
+    ]
 }
