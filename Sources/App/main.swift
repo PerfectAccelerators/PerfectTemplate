@@ -3,6 +3,7 @@ import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 import Lib
+import ApplicationConfiguration
 
 #if os(Linux)
 let fileRoot = "/perfect-deployed/Perfect/"

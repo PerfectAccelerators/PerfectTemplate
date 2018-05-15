@@ -2,6 +2,7 @@
 import PerfectHTTPServer
 import PerfectHTTP
 import PerfectRequestLogger
+import ApplicationConfiguration
 
 extension Application {
     static func requestFilters() -> [(HTTPRequestFilter, HTTPFilterPriority)] {
