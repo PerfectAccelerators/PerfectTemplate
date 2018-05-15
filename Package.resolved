@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ApplicationConfiguration",
+        "repositoryURL": "https://github.com/PerfectAccelerators/ApplicationConfiguration.git",
+        "state": {
+          "branch": "master",
+          "revision": "752bd38f9982c291c33b77dbdb08ab6d0ad8fda9",
+          "version": null
+        }
+      },
+      {
         "package": "Curly",
         "repositoryURL": "https://github.com/PerfectAccelerators/curly.git",
         "state": {
@@ -159,7 +168,7 @@
         "repositoryURL": "https://github.com/PerfectAccelerators/ScantORM.git",
         "state": {
           "branch": "master",
-          "revision": "c618c90a25a41e624cd5dacb822f8fded2ddaaeb",
+          "revision": "bbce5f3e8cbb7f7e3d5b3b22b11aaac422a566db",
           "version": null
         }
       },
