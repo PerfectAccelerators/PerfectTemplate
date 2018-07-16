@@ -13,7 +13,11 @@ let fileRoot = ""
 let filePath = "./config/ApplicationConfiguration.json"
 #endif
 
-let app = Application(name: "Perfect", path: filePath)
+let app = Application(name: "Perfect",
+                      path: filePath,
+                      routes: Application.appRoutes(),
+                      filters: AppFilters(request: Application.requestFilters(),
+                                          response: Application.responseFilters()))
 
 do {
     try HTTPServer.launch(app.server())
