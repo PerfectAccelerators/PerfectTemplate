@@ -14,8 +14,8 @@
         "verifyMode": "peer"
     },
     "logging": {
-        "requestLoggingPath": "./bsRequests.log",
-        "logPath": "./bs.log"
+        "requestLoggingPath": "./perfectRequests.log",
+        "logPath": "./perfect.log"
     },
     "db": {
         "name": "perfect",
