@@ -5,12 +5,12 @@ import PerfectHTTP
 import ApplicationConfiguration
 
 protocol RoutesProtocol {
-    static func routes() -> Routes
+    static func appRoutes() -> Routes
 }
 
 extension Application: RoutesProtocol {
     
-    static func routes() -> Routes {
+    public static func appRoutes() -> Routes {
         
         var routes = Routes()
         
