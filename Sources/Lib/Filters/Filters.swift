@@ -5,7 +5,7 @@ import PerfectRequestLogger
 import ApplicationConfiguration
 
 extension Application {
-    static func requestFilters() -> [(HTTPRequestFilter, HTTPFilterPriority)] {
+    public static func requestFilters() -> [(HTTPRequestFilter, HTTPFilterPriority)] {
         
         var filters: [(HTTPRequestFilter, HTTPFilterPriority)] = [(HTTPRequestFilter, HTTPFilterPriority)]()
         filters.append((APIRequestLogger(), HTTPFilterPriority.high))
@@ -14,7 +14,7 @@ extension Application {
         return filters
     }
     
-    static func responseFilters() -> [(HTTPResponseFilter, HTTPFilterPriority)] {
+    public static func responseFilters() -> [(HTTPResponseFilter, HTTPFilterPriority)] {
         
         var filters: [(HTTPResponseFilter, HTTPFilterPriority)] = [(HTTPResponseFilter, HTTPFilterPriority)]()
         
